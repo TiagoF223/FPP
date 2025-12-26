@@ -1,5 +1,21 @@
-titulo,valor
-Produto A,10.50
-Produto B,25.00
-Produto C,7.99
-
+Tipo,Categoria,Subcategoria,Valor,Data
+-,Alimentação,Restaurante,15.50,02/01/2025
++,Salário,Empresa,1200.00,01/01/2025
+-,Saúde,Farmácia,22.40,03/01/2025
+-,Lazer,Cinema,12.00,05/01/2025
+-,Alimentação,Supermercado,45.60,05/01/2025
+-,Habitação,Renda,450.00,01/01/2025
+-,Transporte,Combustível,60.00,07/01/2025
++,Investimento,Dividendos,15.30,10/01/2025
+-,Alimentação,Café,1.20,11/01/2025
+-,Saúde,Dentista,50.00,12/01/2025
+-,Educação,Curso Online,25.00,15/01/2025
+-,Lazer,Subscrição Streaming,10.99,15/01/2025
+-,Alimentação,Restaurante,30.00,18/01/2025
+-,Transporte,Passe Mensal,40.00,20/01/2025
++,Extra,Venda OLX,50.00,22/01/2025
+-,Alimentação,Supermercado,85.00,23/01/2025
+-,Habitação,Luz,35.00,24/01/2025
+-,Saúde,Consulta Rotina,40.00,25/01/2025
+-,Lazer,Ginásio,30.00,27/01/2025
+-,Alimentação,Compras Avulsas,12.30,28/01/2025
