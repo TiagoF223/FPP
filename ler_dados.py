@@ -13,22 +13,21 @@ def ler_dados():
             v = float(linha['Valor'])
             d = linha['Data']
             
-            # 1. Garantir o nível do TIPO (+ ou -)
+           #1. TIPO (+ ou -)
             if t not in dct:
                 dct[t] = {}
             
-            # 2. Garantir o nível da CATEGORIA (Alimentação, etc)
+            # 2. CATEGORIA (Alimentação, etc)
             if c not in dct[t]:
                 dct[t][c] = {}
                 
-            # 3. Garantir o nível da SUBCATEGORIA (Restaurante, etc)
+            # 3. SUBCATEGORIA (Restaurante, etc)
             if s not in dct[t][c]:
                 dct[t][c][s] = [] # Criamos uma lista para aceitar vários gastos
             
-            # 4. Adicionar os dados finais (Valor e Data)
+            # 4. Valor e Data
             dct[t][c][s].append((v, d))
-            
-    print(dct)
-
+        return dct
 if __name__ == "__main__": 
     ler_dados()
+    
