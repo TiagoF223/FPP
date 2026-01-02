@@ -5,6 +5,10 @@
 #exportação de relatórios de orçamento
 
 import calculator  #somatorio() e soma_mes(mes)
+GREEN = '\033[32m'  #atribui cor verde para positivo
+RED = '\033[31m'    #atribui cor vermelho para negativo
+RESET = '\033[0m'   #retorna a cor para o padrão
+
 def Budget_module():
     print('='*50)
     print("============ Welcome to Budget Program ===========")
@@ -12,7 +16,7 @@ def Budget_module():
 
     while True:
         print('1.Annual Expenses')
-        print('2.')
+        print('2.Mounthly Expenses')
         print('3.')
         print('4.')
         print('5.EXIT')
@@ -38,7 +42,21 @@ def Budget_module():
                 print(" Here is your annual financial summary.\n Whould you like to perform another operation?\n If so, please select an option from the menu below.")
                 print('='*50)
             elif numero==2:
-                pass
+                mes=input("Enter the month number (e.g., '01' for January, '02' for February): ")
+                total_pos, total_neg, saldo = calculator.soma_mes(mes)
+                GREEN = '\033[32m'  #atribui cor verde para positivo
+                RED = '\033[31m'    #atribui cor vermelho para negativo
+                RESET = '\033[0m'   #retorna a cor para o padrão
+                print('='*50)
+                print(f"Total Positive: {GREEN} {total_pos:.2f}€{RESET}")
+                print(f"Total Negative: {RED} {total_neg:.2f}€{RESET}")
+                if saldo >= 0:
+                    print(f"Your Monthly Balance: {GREEN} {saldo:.2f}€{RESET}")
+                else:
+                    print(f"Your Monthly Balance: {RED} {saldo:.2f}€{RESET}")
+                print('='*50)
+                print(" Here is your monthly financial summary.\n Whould you like to perform another operation?\n If so, please select an option from the menu below.")
+                print('='*50)
             elif numero==3:
                 pass
             elif numero==4:
